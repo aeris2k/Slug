@@ -23,6 +23,6 @@ class Slug
             }
         }
 
-        return $slug;
+        $model->set_attribute($field, $slug);
     }
 }
