@@ -2,9 +2,16 @@ Usage example
 =============
 
 ```php
-public function set_name($name)
+class Page extends Eloquent
 {
-	$this->set_attribute('name', $name);
-    $this->set_attribute('slug', Slug::create_unique($name, $this));
+	......
+	
+	public function set_name($name)
+	{
+		$this->set_attribute('name', $name);
+    	$this->set_attribute('slug', Slug::create_unique($name, $this));
+	}
+	
+	....
 }
 ```
