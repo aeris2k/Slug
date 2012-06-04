@@ -2,7 +2,7 @@
 
 class Slug
 {
-    public static function create_unique($string = '', $model, $field = 'slug')
+    public static function create_unique($string, Eloquent $model, $field = 'slug')
     {
         $slug = Str::slug($string);
 
@@ -23,6 +23,6 @@ class Slug
             }
         }
 
-        $model->set_attribute($field, $slug);
+        return $slug;
     }
 }
